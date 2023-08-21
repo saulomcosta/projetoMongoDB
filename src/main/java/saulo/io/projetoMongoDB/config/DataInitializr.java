@@ -60,6 +60,10 @@ public class DataInitializr implements ApplicationListener<ContextRefreshedEvent
 		Useres useres = repository.findByNameIgnoreCase("dany");
 		System.out.println("4 -" + useres.getName());
 
+		// Busca um dado pelo nome ignorando o case com like
+		Useres usered = repository.findByNameIgnoreCaseLike("d");
+		System.out.println("54 -" + usered.getName());
+		
 		// Busca Lista de dados @Query
 		List<Useres> consultaQuery = repository.findByFirstnameprimeiro("Gabriel");
 

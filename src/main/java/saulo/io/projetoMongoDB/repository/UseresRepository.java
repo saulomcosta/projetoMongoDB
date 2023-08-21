@@ -13,6 +13,8 @@ public interface UseresRepository extends MongoRepository<Useres, Long> {
 		
 	Useres findByNameIgnoreCase(String name);
 	
+	Useres findByNameIgnoreCaseLike(String name);
+	
 	Useres findByNameLike(String name);
 	
 	void deleteByName(String name);
